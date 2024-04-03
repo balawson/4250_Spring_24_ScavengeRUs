@@ -11,3 +11,5 @@ User Story: As an Admin, I should not be able to create a hunt with the same nam
 Acceptance Criteria: Admin is not able to create a hunt with hunt name "x" if hunt name "x" is already the name of a previously created/existing hunt.
 Business Value: In reference to the software requirements,"Access codes should be unique". Since the format of an access code is "user-phone-number/hunt-name", ensuring that each hunt has a unique name is the only way to avoid cases where the user has already joined a hunt with that same name before.
 Result: 
+
+Sprint 2
