@@ -5,12 +5,12 @@ Sprint 1
 User Story: As an Admin, I should be able to securely reset my password in the event it is lost using a forgot password link.
 Acceptance Criteria: Admin is able to use the "forgot password" link on the login page to initiate the password reset/recovery process. Admin should recieve a temporary password via email and is redirected to a page that forces them to set a new password.
 Business Value: Ensures that admins can maintain access to their accounts in the event of forgotten/lost passwords.
-Result: 
+Result: No release. Team was able to work on a solution but ran into issues manipulating the user database.
 
 User Story: As an Admin, I should not be able to create a hunt with the same name as an existing hunt.
 Acceptance Criteria: Admin is not able to create a hunt with hunt name "x" if hunt name "x" is already the name of a previously created/existing hunt.
 Business Value: In reference to the software requirements,"Access codes should be unique". Since the format of an access code is "user-phone-number/hunt-name", ensuring that each hunt has a unique name is the only way to avoid cases where the user has already joined a hunt with that same name before.
-Result: 
+Result: No release.
 
 Sprint 2
 User Story: As a developer, I should be able to access documentation explaining the code structure and the flow of data so that I can have a better understanding of the application and more effectively use it in the future.
