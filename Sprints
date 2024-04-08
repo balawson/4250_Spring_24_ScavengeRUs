@@ -13,7 +13,7 @@ Business Value: In reference to the software requirements,"Access codes should b
 Result: No release.
 
 Sprint 2
-User Story: As a developer, I should be able to access documentation explaining the code structure and the flow of data so that I can have a better understanding of the application and more effectively use it in the future.
+User Story: As a Developer, I should be able to access documentation explaining the code structure and the flow of data so that I can have a better understanding of the application and more effectively use it in the future.
 Acceptance Criteria: Understandable documentation/diagrams further explaining the current code structure and the flow of data.
 Business Value: Valuable documentation allows developers to gain an deeper understanding of how the application manages data and can be referenced by future developers.
 Result: 
