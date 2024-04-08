@@ -82,20 +82,22 @@ public class Functions
 				// NOTE: can throw SmtpException, but we don't really know what to do if it does, so we don't catch it
 				client.Send(message);
 			}
+
+
 		}
 	}
 
 
-	/// <summary>
-	/// sends an email to a phone number to be recieved as SMS
-	/// </summary>
-	/// <param name="carrier"></param>
-	/// <param name="recipientPhNumber"></param>
-	/// <param name="body"></param>
-	/// <returns></returns>
-	public static async Task SendSMS(Carrier carrier, string recipientPhNumber, string body)
+    /// <summary>
+    /// sends an email to a phone number to be recieved as SMS
+    /// </summary>
+    /// <param name="carrier"></param>
+    /// <param name="recipientPhNumber"></param>
+    /// <param name="body"></param>
+    /// <returns></returns>
+    public static async Task SendSMS(Carrier carrier, string recipientPhNumber, string body)
 	{
 		string recipientAddress = $"{recipientPhNumber}@{_carrierToGateway[carrier]}";
 		await SendEmail(recipientAddress, "", body);
 	}
-}
+    }
