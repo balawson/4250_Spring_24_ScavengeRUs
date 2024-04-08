@@ -279,5 +279,10 @@ namespace ScavengeRUs.Services
             return users;
 
         }
+
+        public Task ReadAdminAsync(string userName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

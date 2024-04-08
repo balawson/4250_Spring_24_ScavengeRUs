@@ -33,52 +33,7 @@ namespace ScavengeRUs.Areas.Identity.Pages.Account
             public string Email { get; set; }
         }
 
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (ModelState.IsValid)
-            {
-                var user = await _userManager.FindByEmailAsync(Input.Email);
-                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
-                {
-                    // Don't reveal that the user does not exist or is not confirmed
-                    return RedirectToPage("./ForgotPasswordConfirmation");
-                }
 
-                // Check if the user is an admin
-                var isAdmin = await IsAdminAsync(user.UserName);
-                if (!isAdmin)
-                {
-                    // Only admins can reset passwords
-                    ModelState.AddModelError(string.Empty, "Only administrators can reset passwords.");
-                    return Page();
-                }
-
-                // Generate a random password
-                string newPassword = GenerateRandomPassword();
-
-                // Set the new password for the user
-                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-                var result = await _userManager.ResetPasswordAsync(user, token, newPassword);
-
-                if (result.Succeeded)
-                {
-                    // Send the new password to the user's email
-                    await SendPassEmail(user.Email, "Password Reset", "Your password has been reset.", newPassword);
-
-                    return RedirectToPage("./ForgotPasswordConfirmation");
-                }
-                else
-                {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    }
-                    return Page();
-                }
-            }
-
-            return Page();
-        }
 
 
         // Method to check if the user is an admin
@@ -108,37 +63,5 @@ namespace ScavengeRUs.Areas.Identity.Pages.Account
             return new string(newPassword);
         }
 
-
-
-        public static async Task SendPassEmail(string recipientEmail, string subject, string body, string newPassword)
-        {
-            // Configure the SMTP client
-            var smtpClient = new SmtpClient("smtp.gmail.com")
-            {
-                Port = 587,
-                Credentials = new NetworkCredential("etsubuchunt98@gmail.com", "your_password"),
-                EnableSsl = true,
-            };
-
-            // Create the email message
-            var message = new MailMessage("etsubuchunt98@gmail.com", recipientEmail, subject, body)
-            {
-                IsBodyHtml = true
-            };
-
-            // Add the new password to the email body
-            message.Body += "<br><br>Your new password: " + newPassword;
-
-            try
-            {
-                // Send the email
-                await smtpClient.SendMailAsync(message);
-            }
-            catch (Exception ex)
-            {
-                // Handle any exceptions
-                Console.WriteLine("Error sending email: " + ex.Message);
-            }
-        }
     }
 }
