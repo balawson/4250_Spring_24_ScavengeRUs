@@ -13,3 +13,12 @@ Business Value: In reference to the software requirements,"Access codes should b
 Result: 
 
 Sprint 2
+User Story: As a developer, I should be able to access documentation explaining the code structure and the flow of data so that I can have a better understanding of the application and more effectively use it in the future.
+Acceptance Criteria: Understandable documentation/diagrams further explaining the current code structure and the flow of data.
+Business Value: Valuable documentation allows developers to gain an deeper understanding of how the application manages data and can be referenced by future developers.
+Result: 
+
+User Story: As an Admin, I should not be able to login via access code like a typical non-admin user so that I can maintain exclusive access to my account. 
+Acceptance Criteria: Admins accounts are not able to be logged into via access code of hunts they have been a part of.
+Business Value: Ensures that access to an admin account remains exclusive to the person that created the account and cannot be easily accessed by anyone else.
+Result: 
