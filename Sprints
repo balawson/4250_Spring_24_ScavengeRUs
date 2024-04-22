@@ -23,8 +23,19 @@ Acceptance Criteria: Admins accounts are not able to be logged into via access c
 Business Value: Ensures that access to an admin account remains exclusive to the person that created the account and cannot be easily accessed by anyone else.
 Result: 
 
-Sprint 4 (04/17/24) Last Modified: 04/17/24
+Sprint 3 (04/17/24) Last Modified: 04/17/24
 User Story: As a Developer, I would like to be able to use uml/sequence diagrams so that I can gain a better understanding of how data flows within the application.
 Acceptance Criteria: The diagrams are accurate and understandable to existing and future developers who do not have a complete understanding of the application. (Should be able to be comprehended without having all the context)
 Business Value: Producing more valuable content not only provides existing developers with a better understanding of the flow of data within the application, but is useful to future developers when attempting to grasp this as well.
+Result: 
+
+Sprint 4 (04/17/24) Last Modified: 04/22/2024
+User Story: As an Admin, I should not be able to login via access code alone so that I can ensure that access to my account remains exclusive to me.
+Acceptance Criteria: Admins are not able to login via access code but must use the login page and provide a valid email and password.
+Business Value: Although admins may not typically be added to hunts, it is currently possible and admin privileges should only be accessible by providing a valid email and password. This is to ensure that admin accounts remain secure.
+Result:
+
+User Story: As an Admin, I should only be able to add hunts using hunt names that are unique and don't already exist in the database so that access codes remain unique across all hunts.
+Acceptance Criteria: Adding a hunt using a hunt name that already belongs to an existing hunt should not be possible. Ideally, should throw an error and explain to the user why they are not able to create that hunt.
+Business Value: As per the requirements document, all access codes should be unique. Since hunt names are automatically used to generate part of the access code for a hunt (the other part being a user's phone number which may be used in multiple hunts), the only way to ensure that access codes remain unique over time is to make the user create a hunt using a hunt name/title that doesn't currently exists in the database.
 Result: 
