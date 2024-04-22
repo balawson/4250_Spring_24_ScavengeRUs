@@ -16,18 +16,18 @@ Sprint 2 (03/28/24) Last Modified: 04/08/24
 User Story: As a Developer, I should be able to access documentation explaining the code structure and the flow of data so that I can have a better understanding of the application and more effectively use it in the future.
 Acceptance Criteria: Understandable documentation/diagrams further explaining the current code structure and the flow of data.
 Business Value: Valuable documentation allows developers to gain an deeper understanding of how the application manages data and can be referenced by future developers.
-Result: 
+Result: Release.
 
 User Story: As an Admin, I should not be able to login via access code like a typical non-admin user so that I can maintain exclusive access to my account. 
 Acceptance Criteria: Admins accounts are not able to be logged into via access code of hunts they have been a part of.
 Business Value: Ensures that access to an admin account remains exclusive to the person that created the account and cannot be easily accessed by anyone else.
-Result: 
+Result: No release.
 
 Sprint 3 (04/17/24) Last Modified: 04/17/24
 User Story: As a Developer, I would like to be able to use uml/sequence diagrams so that I can gain a better understanding of how data flows within the application.
 Acceptance Criteria: The diagrams are accurate and understandable to existing and future developers who do not have a complete understanding of the application. (Should be able to be comprehended without having all the context)
 Business Value: Producing more valuable content not only provides existing developers with a better understanding of the flow of data within the application, but is useful to future developers when attempting to grasp this as well.
-Result: 
+Result: Released 7 UML/Sequence Diagrams. Used PO and Scrum Master to do acceptance testing since they have not work on the diagrams or the application.
 
 Sprint 4 (04/17/24) Last Modified: 04/22/2024
 User Story: As an Admin, I should not be able to login via access code alone so that I can ensure that access to my account remains exclusive to me.
