@@ -1,10 +1,13 @@
 # BucHunt
 This READ ME document serves as a starting place to begin you Scrum project for SE 1.
-  - Below are Documents relating to different parts of the project that will help guide you on how they work.
-  - Google Doc link includes PDF to the previous semester project notes, changes, and general information.
-  - Trello link includes our tasks that have been completed each Scrum sprint shown in Sprint completed items panels as well as incompleted items in the overall backlog panel. Each task panel includes important notes.
-  - The two discord links are to see our discussions and to reach out to the past semesters members. "SE1 Project Team" is the previous groups discord & "Overall Discord" includes all previous SE1 group memebers for this project.
-
+  - The documents folder contains UML diagrams outlining the project.
+  - The documents folder contains files about the basic file structure, UML diagrams describing how the objects interact with each other.
+  - The documents folder also contains the description of the previous team's work.
+  - Our team created the series of diagrams in the documentation folder and focused on fixing a couple security bugs.
+  - The password reset for admins is partially implemented, most of the backend requirements are still needed.
+    - This one may be more than you think, consider slicing it thin to ensure the tasks can fit in the sprint.
+  - Bug we found: Too long a header for a hunt cuts off access code sent via sms. This was a bug left over in out product backlog.
+    
 ### BucHunt Admin Access for Tests:
  UN: waltonca@etsu.edu
  PW: YMXH@9J!72kM6Em
