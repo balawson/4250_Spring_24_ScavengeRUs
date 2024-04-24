@@ -123,12 +123,19 @@ namespace ScavengeRUs.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Hunt hunt)
         {
+            bool exists = await _huntRepo.ExistsAsync(hunt.HuntName);
+            if (exists)
+            {
+                ModelState.AddModelError("HuntName", "A Hunt already exists with that name. Please enter a unique Hunt Name.");
+                return View(hunt);
+            }
             if (ModelState.IsValid)
             {
                 hunt.CreationDate = DateTime.Now;
                 await _huntRepo.CreateAsync(hunt);
                 return RedirectToAction("Index");
             }
+            
             return View(hunt);
            
         }

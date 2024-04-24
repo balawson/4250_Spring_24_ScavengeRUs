@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Google.Api;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ScavengeRUs.Data;
 using ScavengeRUs.Models.Entities;
@@ -39,6 +40,15 @@ namespace ScavengeRUs.Services
             return hunt;
         }
 
+        public async Task<bool> ExistsAsync(string huntName)
+        {
+            if (huntName == null)
+                return false;
+
+            // Use ToLower to perform a case-insensitive comparison
+            return await _db.Hunts
+                                 .AnyAsync(h => h.HuntName.ToLower() == huntName.ToLower());
+        }
 
         /// <summary>
         /// This method reads all hunts from the db and returns a list of hunts

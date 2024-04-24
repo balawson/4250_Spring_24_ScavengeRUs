@@ -17,5 +17,6 @@ namespace ScavengeRUs.Services
         Task<Location> ReadLocation(int id);
         Task RemoveTaskFromHunt(int id, int huntid);
         void Update(int oldId, Hunt hunt);
+        Task<bool> ExistsAsync(string huntName);
     }
 }
